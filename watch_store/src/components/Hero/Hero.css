@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .div1 {
+    position: relative;
+    min-height: 550px;
+    background-color: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .div3 {
+    padding-bottom: 2rem;
+  }
+  
+  .div4 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding-top: 2rem;
+    order: 2;
+    max-width: 100%;
+  }
+  
+  .heading1 {
+    font-size: 3rem;
+    font-weight: bold;
+    max-width: 90%; /* To prevent large text overflow */
+  }
+  
+  .order {
+    background-color: #f97316;
+    color: white;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+  
+  .order:hover {
+    background-color: #ea580c;
+  }
+  
+  .imagess {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .imagess:hover {
+    transform: scale(1.2);
+  }
+  
+  .watches {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: white;
+    color: black;
+    border-radius: 1.5rem;
+    border: 1px solid rgb(74, 77, 82);
+    width: 100%;
+    height: auto;
+  }
+  
+  .watch-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .price_tag {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1rem;
+  }
+  
+  .price {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .div9 {
+    min-height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 99;
+  }
+  
+  .div10 img {
+    max-height: 400px;
+    max-width: 400px;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* Media Queries for smaller devices (max-width: 480px) */
+  @media (max-width: 480px) {
+  
+    .div1 {
+      flex-direction: column; /* Stack everything vertically */
+      padding: 1rem;
+      z-index: 7;
+    }
+  
+    /* Ensure image comes first on mobile */
+    .div10 {
+      order: 1; /* Ensure main image is at the top */
+      margin-top: 0; /* Reset margin */
+    }
+  
+    .div10 img {
+      max-width: 100%; /* Adjust image size */
+      max-height: 200px; /* Adjust image size for mobile */
+      margin-top: 0; /* Reset margin */
+    }
+  
+    .heading1 {
+      order: 2; /* Heading comes second */
+      font-size: 2.5rem; /* Adjust font size for mobile */
+      text-align: center; /* Center heading */
+      margin-top: 1rem;
+    }
+  
+    .text {
+      order: 3; /* Title/description comes third */
+      text-align: center; /* Center text */
+      padding: 1rem;
+    }
+  
+    .watches {
+      order: 4; /* Watches section comes last */
+      flex-direction: column; /* Stack watches vertically */
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+  
+    .watch-item {
+      flex-direction: column; /* Align each watch item vertically */
+      align-items: center;
+    }
+  
+    .imagess {
+      width: 80px; /* Adjust size for smaller screens */
+      height: 80px;
+    }
+  }
+  
